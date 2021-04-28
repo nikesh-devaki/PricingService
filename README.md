@@ -10,6 +10,12 @@
 
 curl --location --request GET 'http://localhost:8080/course/1/price?currency=USD&location=BGL'
 
+curl --location --request GET 'http://localhost:8080/course/2/price?currency=GBP&location=BGL'
+
+curl --location --request GET 'http://localhost:8080/course/3/price?currency=INR&location=BGL'
+
+curl --location --request GET 'http://localhost:8080/course/4/price?currency=INR&location=BGL'
+
 ### Output:
 
 ![image](https://user-images.githubusercontent.com/6975882/116449965-5fb26200-a878-11eb-86f5-0283374d1136.png)
@@ -25,7 +31,7 @@ curl --location --request GET 'http://localhost:8080/course/1/price?currency=USD
 * I have considered Tax, currency conversion charges of courses.
 * A new type of charge can be created by extending Charge class and adding a charge record for that course.
 
-### Technical Debt:
+### Technical Debt/Improvements:
 * Course-Charge tables schema can be further normalized.
 * City level tax, currency conversion charge percentages are currently stored as static map. This can be moved to .properties file.
 * Unit test cases not written.
