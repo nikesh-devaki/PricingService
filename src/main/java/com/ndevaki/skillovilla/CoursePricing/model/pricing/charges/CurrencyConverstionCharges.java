@@ -22,6 +22,10 @@ public class CurrencyConverstionCharges extends Charge{
 	public CurrencyConverstionCharges(Course course) {
 		super(course);
 	}
+	
+	public CurrencyConverstionCharges() {
+		super(null);
+	}
 
 	public CurrencyConverstionCharges(Course course, String currency) {
 		super(course);
@@ -37,4 +41,13 @@ public class CurrencyConverstionCharges extends Charge{
 		}
 		return this.course.getBasePrice();
 	}
+
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+	
 }

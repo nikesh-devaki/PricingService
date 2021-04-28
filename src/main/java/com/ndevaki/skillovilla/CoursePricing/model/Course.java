@@ -51,6 +51,9 @@ public class Course {
 		PricingStrategy(String label) {
 			this.label=label;
 		}
+		public String getLabel() {
+			return this.label;
+		}
 	}
 
 	public Course() {
@@ -108,8 +111,8 @@ public class Course {
 		this.basePrice = basePrice;
 	}
 
-	public PricingStrategy getPricingStrategy() {
-		return pricingStrategy;
+	public String getPricingStrategy() {
+		return pricingStrategy.getLabel();
 	}
 
 	public void setPricingStrategy(PricingStrategy pricingStrategy) {
@@ -124,4 +127,13 @@ public class Course {
 		this.charges = charges;
 	}
 
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	
 }

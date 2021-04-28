@@ -15,7 +15,8 @@ public abstract class Charge {
 	@ManyToOne
     @JoinColumn(name="course_id", nullable=false)
 	Course course;
-	
+	@Column(nullable = false)
+	String name;
 	public Charge() {
 		
 	}
@@ -25,4 +26,17 @@ public abstract class Charge {
 	}
 	
 	public abstract double getCharge();
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 }

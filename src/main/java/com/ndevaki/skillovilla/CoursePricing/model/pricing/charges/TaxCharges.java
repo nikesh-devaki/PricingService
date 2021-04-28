@@ -25,7 +25,15 @@ public class TaxCharges extends Charge {
 
 	@Override
 	public double getCharge() {
-		return 12/100*(this.course.getBasePrice());
+		return 12*(this.course.getBasePrice());
 	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	
+	
 	
 }
