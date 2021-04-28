@@ -18,7 +18,7 @@ public class CoursePriceController {
 	@Autowired
 	PricingService pricingService;
 	
-	@GetMapping("price/{id}")
+	@GetMapping("{id}/price")
 	@ResponseBody
 	public Course getCoursePriceSummary(@PathVariable("id")final Integer courseId,
 										@RequestParam String currency,

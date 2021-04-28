@@ -1,5 +1,8 @@
 package com.ndevaki.skillovilla.CoursePricing.model.pricing.charges;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
@@ -10,6 +13,12 @@ import com.ndevaki.skillovilla.CoursePricing.model.Course;
 public class TaxCharges extends Charge {
 
 	String location;
+	private static final Map<String,Double> taxMap=new HashMap<String,Double>();
+	static {
+		taxMap.put("BGL",0.18);
+		taxMap.put("HYD",0.125);
+		taxMap.put("TN",0.185);
+	}
 	
 	public TaxCharges(Course course) {
 		super(course);
@@ -25,7 +34,7 @@ public class TaxCharges extends Charge {
 
 	@Override
 	public double getCharge() {
-		return 12*(this.course.getBasePrice());
+		return taxMap.get(location)*(this.course.getBasePrice());
 	}
 	public String getLocation() {
 		return location;

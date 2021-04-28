@@ -17,6 +17,7 @@ public class CurrencyConverstionCharges extends Charge{
 	static {
 		conversionMap.put("USD",0.013);
 		conversionMap.put("GBP",0.0097);
+		conversionMap.put("INR",1.0);
 	}
 	
 	public CurrencyConverstionCharges(Course course) {
