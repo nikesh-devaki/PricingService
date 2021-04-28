@@ -15,7 +15,6 @@ public class PricingService {
 	public Course getPriceSummary(Integer id,String currency,String location) {
 
 		Course course=courseRepository.findByIdAndCurrencyAndLocation(id,currency,location);
-		System.out.println(course.getCharges().size()+" ---");
 		return course;
 	}
 
