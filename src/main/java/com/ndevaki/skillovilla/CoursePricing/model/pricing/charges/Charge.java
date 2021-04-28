@@ -16,7 +16,9 @@ public abstract class Charge {
     @JoinColumn(name="course_id", nullable=false)
 	Course course;
 	
-	
+	public Charge() {
+		
+	}
 	public Charge(Course course) {
 		super();
 		this.course = course;
